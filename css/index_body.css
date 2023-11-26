@@ -1,0 +1,54 @@
+th.indexcolname {
+   padding-left: 0em;
+   text-align:left;
+   font-size: 24px;
+   font-family: 'ibmplexsans-light';
+   font-weight: 200;
+   opacity: 0.5;
+   }
+td.indexcolname {
+   padding-left: 0em;
+   text-align:left;
+   font-size: 24px;
+   font-family: 'ibmplexsans-light';
+   font-weight: 200;
+   opacity: 1.0;
+   }
+
+
+
+th.indexcollastmod {
+   padding-left: 20em;
+   text-align: center;
+   font-size: 24px;
+   font-family: 'ibmplexsans-light';
+   font-weight: 200;
+   opacity: 0.5;
+   }
+td.indexcollastmod {
+   padding-left: 20em;
+   text-align: center;
+   font-size: 24px;
+   font-family: 'ibmplexsans-light';
+   font-weight: 200;
+   opacity: 0.5;
+   }
+
+
+
+th.indexcolsize {
+   padding-left: 3em;
+   text-align: right;
+   font-size: 24px;
+   font-family: 'ibmplexsans-light';
+   font-weight: 200;
+   opacity: 0.5;
+   }
+td.indexcolsize {
+   padding-left: 3em;
+   text-align: right;
+   font-size: 24px;
+   font-family: 'ibmplexsans-light';
+   font-weight: 200;
+   opacity: 0.6;
+   }

@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>referencia rapida de git</title>
+	<link rel="stylesheet" href="./assets/css/estilo.css">
+  </head>
+  <body id="fondotech">
+  	<div id="cabecera">
+		referencia rapida de git</br>
+		2023-11-23
+	</div>
+	
+	<hr>
+	<div id="texto">
+		<h1 id="git">git</h1>
+
+<p> </p>
+<h2 id="1-que-es-github">1 que es github</h2>
+<p>Software de control de versiones creado en 2005 por Linus Torvalds, para trabajar con varios desarrolladores en el núcleo de Linux.
+<strong>git</strong> rastrea el contenido y permite revertir y regresar a una versión anterior del código.</p>
+
+<h3 id="conceptos">conceptos</h3>
+<ul>
+  <li><strong>rama</strong>, copia independiente del codigo que puede cambiarse y luego integrarse, o no</li>
+  <li><strong>repositorio</strong>, proyecto con multiples archivos, hay 3 de referencia,
+    <ul>
+      <li>github, de microsoft</li>
+      <li>gitlab, de gitlab</li>
+      <li>bitbucket, de atlassian</li>
+    </ul>
+  </li>
+</ul>
+
+<p> </p>
+
+<h2 id="2-instalacion-de-git">2 instalacion de git</h2>
+<p>En RockyLinux (RedHat, CentOS),</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install -y git
+git --version
+git config --global user.name "nombre_usuarios_defecto_guardar_el_trabajo"
+git config --global user.mail "email_defecto"
+</code></pre></div></div>
+
+<p> </p>
+
+<h2 id="3-comenzar-cuando-el-repositorio-está-en-línea">3 comenzar cuando el repositorio está en línea</h2>
+<ol>
+  <li>
+    <p>Una vez creado el repositorio en línea, obtener la URL para clonarlo localmente</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone URL
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Una vez editados los cambios localmente, revisar estado</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Añadir los archivos que están listos para integrarse en el repositorio</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add NOMBRE_ARCHIVO
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Integrar los archivos en el repositorio local</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "MENSAJE DESCRIPTIVO CAMBIO"
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Obtener nombre del repositorio en línea (por defecto origin)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Enviar ficheros a la rama “master” del repositorio en línea “origin”</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Descargar ficheros de la rama “master” del repositorio en línea “origin”</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull origin master
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p> </p>
+
+<h2 id="4-comenzar-creando-un-repositorio-local-y-luego-enviándolo-a-un-repo-en-línea">4 comenzar creando un repositorio local y luego enviándolo a un repo en línea</h2>
+
+<ol>
+  <li>
+    <p>Ubicados en el directorio que contendrá los ficheros, iniciar el repositorio git</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Revisar estado del repositorio</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Añadir ficheros</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Integrar ficheros en el repositorio local</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "MENSAJE"
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Se crea el repositorio remoto, se obtiene su URL y se añade al proyecto git con el nombre “origin” (por defecto)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin URL
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Se listan los repositorios remotos vinculados al proyecto (debe aparecer “origin” o el nombre que se haya dado)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Se envian los ficheros a la rama master</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin master
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+	</div>
+	<hr>
+	
+	<div id="pie">
+	version 1.0
+	</div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+@font-face {
+		font-family: "ibmplexsans-light";
+		font-weight: 200;
+		src: url("../fnt/ibmplexsans/IBMPlexSans-ExtraLight.ttf");
+		}
+ @font-face {
+		font-family: "ibmplexsans-regular";
+		font-weight: 500;
+		src: url("../fnt/ibmplexsans/IBMPlexSans-Medium.ttf");
+		}
+		
+@font-face {
+		font-family: "ibmplexmono-regular";
+		font-weight: 500;
+		src: url("../fnt/ibmplexmono/IBMPlexMono-Medium.ttf");
+		}
+		
+#fondotech	{
+		background-color: #F3F6FB;
+		max-width: 1000px;
+		margin: 0 auto;
+		float: none;
+		}		
+ 
+
+#cabecera	{
+        font-family: 'ibmplexsans-light';
+		font-size:14px;
+        letter-spacing: 1px;
+        text-decoration: none;
+		color:#B0B0B0;
+		}
+
+#pie	{
+        font-family: 'ibmplexsans-light';
+		font-size:14px;
+        letter-spacing: 1px;
+        text-decoration: none;
+		color:#B0B0B0;
+		}
+
+
+#texto	{
+        font-family: 'ibmplexsans-light';
+		font-size:16px;
+        letter-spacing: 1px;
+        text-decoration: none;
+		color:#000000;
+		}
+		
+#resaltado	{
+        font-family: 'ibmplexsans-regular';
+		font-size:16px;
+        letter-spacing: 1px;
+        text-decoration: none;
+		color:#000000;
+		}
+
+#codigo	{
+        font-family: 'ibmplexmono-regular';
+		font-size:16px;
+        letter-spacing: 1px;
+        text-decoration: none;
+		color:#000000;
+		}
+
+
+
+hr 		{
+        background-color: #000000;
+        border-width: 0;
+        height: 1px;
+		}
