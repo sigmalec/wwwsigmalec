@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>referencia rapida de tmux</title>
+	<link rel="stylesheet" href="./assets/css/estilo.css">
+  </head>
+  <body id="fondotech">
+  	<div id="cabecera">
+		referencia rapida de tmux</br>
+		2023-12-08
+	</div>
+	
+	<hr>
+	<div id="texto">
+		<h1 id="-tmux"><a href="../" style="text-decoration: none; color:black">←←</a>  tmux</h1>
+
+<p> </p>
+
+<h2 id="qué-es">qué es</h2>
+<p>Terminal MUltipleXer, con arquitectura cliente-servidor, donde el servidor mantienen en ejecucion las sesiones de manera que el cliente puede volver a conectarse a ellas, por ejemplo antes desconexiones SSH.</p>
+
+<p>Es posterior a screen y permite multiples ventanas, cada una de las cuales dividida en varias partes, para tener vista y ejecución simultanea de multiples shell.</p>
+
+<p>Admite personalizacion global en /etc/tmux.conf e individual en el fichero ~/.tmux.conf, así como scripts de inicio, plugins y funciones mas avanzadas. Mas ayuda,</p>
+<ul>
+  <li><a href="https://pragprog.com/titles/bhtmux2/tmux-2/">tmux 2 Productive Mouse-Free Development, Brian P. Hogan, Ed. The Pragmatic Programmers</a></li>
+  <li><a href="https://github.com/tmux/tmux/wiki/Getting-Started">Getting Started</a></li>
+</ul>
+
+<p> </p>
+
+<h3 id="conceptos">conceptos</h3>
+<ul>
+  <li>
+    <p><strong>session</strong> es una coleccion de <em>windows</em> o ventanas. Las sesiones pueden tener nombre o no (numeradas desde 0)</p>
+  </li>
+  <li>
+    <p><strong>window</strong> es una coleccion de <em>panes</em> o paneles. Las ventanas pueden tener nombre o no (numeradas desde 0). Solo se muestra una ventana a la vez, ocupando toda la pantalla y pudiendo cambiar de una ventana a otra a modo de pestañas</p>
+  </li>
+  <li>
+    <p><strong>pane</strong> es cada una de las secciones rectangulares en que se divide una ventana, en donde se ejecuta un shell con el que trabajar</p>
+  </li>
+</ul>
+
+<p> </p>
+
+<h2 id="comandos-básicos">comandos básicos</h2>
+
+<ul>
+  <li>version de tmux   <code class="language-plaintext highlighter-rouge">tmux -V</code></li>
+  <li>ejecutar en 256 colores   <code class="language-plaintext highlighter-rouge">tmux -2</code></li>
+  <li>nueva sesion “nombre”   <code class="language-plaintext highlighter-rouge">tmux new -s nombre</code></li>
+  <li>nueva sesion “nombre” en background   <code class="language-plaintext highlighter-rouge">tmux new -s nombre -d</code></li>
+  <li>nueva sesion “nombre”, y window con nombre “monit”   <code class="language-plaintext highlighter-rouge">tmux new -s nombre -n monit</code></li>
+  <li>lista de sesiones   <code class="language-plaintext highlighter-rouge">tmux ls</code></li>
+  <li>conectarse a sesion “nombre”   <code class="language-plaintext highlighter-rouge">tmux a -t nombre</code></li>
+  <li>terminar sesion “nombre”   <code class="language-plaintext highlighter-rouge">tmux kill-session -t nombre</code></li>
+  <li>renombrar sesion   <code class="language-plaintext highlighter-rouge">tmux rename-session -t nombreanterior nombrenuevo</code></li>
+  <li>nueva ventana   <code class="language-plaintext highlighter-rouge">tmux new-window -t nombresesion -n nombrewindow</code></li>
+  <li>renombrar ventana   <code class="language-plaintext highlighter-rouge">tmux rename-window -t nombresesion.window nombrenuevo</code></li>
+</ul>
+
+<p> </p>
+
+<h2 id="secuencias-de-teclas">secuencias de teclas</h2>
+
+<h3 id="generales">generales</h3>
+<ul>
+  <li>prefijo (PR)   <code class="language-plaintext highlighter-rouge">CTRL-b</code></li>
+  <li>ayuda   <code class="language-plaintext highlighter-rouge">(PR) ?</code></li>
+  <li>modo comando   <code class="language-plaintext highlighter-rouge">(PR) :</code></li>
+  <li>abandonar la sesion   <code class="language-plaintext highlighter-rouge">(PR) d</code></li>
+  <li>mostrar reloj   <code class="language-plaintext highlighter-rouge">(PR) t</code></li>
+  <li>renombrar sesion   <code class="language-plaintext highlighter-rouge">(PR) $</code></li>
+</ul>
+
+<p> </p>
+
+<h3 id="ventanas">ventanas</h3>
+<ul>
+  <li>crear nueva ventana   <code class="language-plaintext highlighter-rouge">(PR) c</code></li>
+  <li>renombrar ventana   <code class="language-plaintext highlighter-rouge">(PR) ,</code></li>
+  <li>listar ventanas   <code class="language-plaintext highlighter-rouge">(PR) w</code></li>
+  <li>mover ventana siguiente   <code class="language-plaintext highlighter-rouge">(PR) n</code></li>
+  <li>mover ventana anterior   <code class="language-plaintext highlighter-rouge">(PR) p</code></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>mover a ventana 1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>…   <code class="language-plaintext highlighter-rouge">(PR) 1|2|3...</code>   <em>ver personalizacion para redefinir F1,F2,F3… directamente</em></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>cierra una ventana   <code class="language-plaintext highlighter-rouge">(PR) &amp;</code></li>
+</ul>
+
+<p> </p>
+
+<h3 id="paneles">paneles</h3>
+<ul>
+  <li>dividir en dos verticalmente (a izquierda y derecha)   <code class="language-plaintext highlighter-rouge">(PR) %</code></li>
+  <li>dividir en dos horizontalmente (arriba y abajo)   <code class="language-plaintext highlighter-rouge">(PR) "</code></li>
+  <li>mover entre paneles   <code class="language-plaintext highlighter-rouge">(PR) o</code></li>
+  <li>mover entre paneles   <code class="language-plaintext highlighter-rouge">(PR) izquierda|abajo|arriba|derecha</code></li>
+  <li>aplica disposicion estandar   <code class="language-plaintext highlighter-rouge">(PR) espacio</code></li>
+  <li>cierra el panel   <code class="language-plaintext highlighter-rouge">(PR) x</code></li>
+</ul>
+
+<p> </p>
+
+<h2 id="scripting">scripting</h2>
+<p>existen al menos tres vias para automatizar la configuración de una sesion, definiendo sus ventanas, paneles y que comandos se lanzan en cada panel</p>
+<ul>
+  <li>empleando un fichero de configuracion de tmux, que contenga las ordenes para crear el entorno. Este es el mecanismo recomendado por ser nativo de tmux</li>
+</ul>
+
+<p>Ejemplo de contenido de <code class="language-plaintext highlighter-rouge">monitor.tmux.conf</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source-file ~/.tmux.conf                   # para incluir la configuracion generica definida para tmux
+new        -s monitor     -d 
+renamew    -t monitor:1   sistema
+neww       -t monitor     -n eventos
+neww       -t monitor     -n red
+splitw     -t monitor:1    -v -p 20
+send-keys  -t monitor:1.1  'sudo htop' C-m
+send-keys  -t monitor:1.2  'watch -n 60 df -hT' C-m
+splitw     -t monitor:2    -v -p 20
+send-keys  -t monitor:2.1  'sudo journalctl -f' C-m
+send-keys  -t monitor:2.2  'sudo watch last -20 -F -x' C-m
+splitw     -t monitor:3    -v
+send-keys  -t monitor:3.1  'sudo iftop' C-m
+splitw     -t monitor:3.2  -h
+send-keys  -t monitor:3.2 'watch vnstat -hg' C-m
+send-keys  -t monitor:3.3 'sudo nethogs -l' C-m
+selectw    -t monitor:1
+</code></pre></div></div>
+
+<p>Para acceder a este entorno, tras comprobar cob <code class="language-plaintext highlighter-rouge">tmux ls</code> que no existe ya la sesion <em>monitor</em> se ejecutaria  <code class="language-plaintext highlighter-rouge">tmux -f monitor.tmux.conf a -t monitor</code></p>
+
+<ul>
+  <li>
+    <p>empleando un script de bash normal, donde se incluya la secuencia de comandos a ejecutar. Este script será practicamente identido al fichero de configuracion (salvo la primera linea, <code class="language-plaintext highlighter-rouge">source ....</code>) pero precediendo cada comando por <code class="language-plaintext highlighter-rouge">tmux </code>, y al final ejecutando un <code class="language-plaintext highlighter-rouge">tmux a -t monitor</code></p>
+  </li>
+  <li>
+    <p>empleando un plugin como <code class="language-plaintext highlighter-rouge">tmuxinator</code> donde se define el entorno en un fichero YAML, con el requisito de necesitar Ruby para su ejecución</p>
+  </li>
+</ul>
+
+<p> </p>
+
+<h2 id="copiar-y-pegar-texto-mostrado-por-pantalla">copiar y pegar texto mostrado por pantalla</h2>
+
+<h3 id="movimiento">movimiento</h3>
+
+<p>Se entra el modo <em>Copiar</em> con las teclas <code class="language-plaintext highlighter-rouge">(PR) [</code> lo que permite moverse, seleccionar y copiar texto que se haya mostrado en el panel. El movimiente se realiza con los cursores, PgUp, PgDown. Se abandona el modo <em>Copiar</em> con ‘q’</p>
+
+<p>Ademas de las teclas de movimiento estándar, si se añade la línea <code class="language-plaintext highlighter-rouge">set -g mode-keys vi</code> en <code class="language-plaintext highlighter-rouge">~/.tmux.conf</code> se pueden emplear las teclas de movimiento de vi. Este es el modo recomendado y extiende el funcionamiento con,</p>
+
+<ul>
+  <li>izquierda,abajo,arriba,derecha   <code class="language-plaintext highlighter-rouge">h j k l</code></li>
+  <li>comienzo de linea, final de linea   <code class="language-plaintext highlighter-rouge">0 $</code></li>
+  <li>página arriba, abajo   <code class="language-plaintext highlighter-rouge">C-b C-f</code> (para C-b es necesario pulsar b dos veces si PR=C-b)</li>
+  <li>comienzo, final del buffer   <code class="language-plaintext highlighter-rouge">g G</code></li>
+  <li>salida   <code class="language-plaintext highlighter-rouge">ENTER</code></li>
+  <li>busqueda hacia arriba, abajo   <code class="language-plaintext highlighter-rouge">? /</code></li>
+  <li>ocurrencia siguiente, anterior   <code class="language-plaintext highlighter-rouge">n N</code></li>
+</ul>
+
+<p> </p>
+
+<h3 id="seleccionar-texto-copiarlo-al-buffer-y-pegarlo">seleccionar texto, copiarlo al buffer y pegarlo.</h3>
+
+<p>Dentro del modo <em>Copiar</em> se emplea la tecla <code class="language-plaintext highlighter-rouge">ESPACIO</code> para empezar a seleccionar y <code class="language-plaintext highlighter-rouge">ENTER</code> para terminar de seleccionar. El texto seleccionado se copia automáticamente a un buffer de memoria</p>
+
+<ul>
+  <li>
+    <p>Seleccionar toda la salida de texto del panel con el comando   <code class="language-plaintext highlighter-rouge">capture-pane</code> (<em>para introducir un comando se emplea</em> <code class="language-plaintext highlighter-rouge">(PR) :</code>)</p>
+  </li>
+  <li>
+    <p>Mostrar el contenido del buffer con el comando   <code class="language-plaintext highlighter-rouge">show-buffer</code></p>
+  </li>
+  <li>
+    <p>Se puede guardar el contenido del buffer con el comando   <code class="language-plaintext highlighter-rouge">save-buffer nombre_fichero</code></p>
+  </li>
+</ul>
+
+<p>Fuera del modo <em>Copiar</em>, se pega el texto en la posición del cursor con la combinación <code class="language-plaintext highlighter-rouge">(PR) ]</code> para pegar el texto</p>
+
+<p>tmux va copiando los textos seleccionados automáticamente a nuevos buffers, que se pueden listar con el comando   <code class="language-plaintext highlighter-rouge">show-buffer</code></p>
+
+<p>Por defecto los buffers se <em>apilan</em> y se pega siempre el último; pero se puede seleccionar el buffer con el que se trabaja con el comando   <code class="language-plaintext highlighter-rouge">choose-buffer</code></p>
+
+<p>Los buffers de tmux se comparten, entre paneles de una misma ventana, entre ventanas de una misma sesion, y <strong>tambien entre diferentes sesiones</strong> de un mismo servidor tmux</p>
+
+<p>Para compartir el buffer con el s.o. se puede emplear la utilidad externa xclip, e invocarla redefiniendo las teclas empleadas para copiar y pegar</p>
+
+<p> </p>
+
+<h2 id="compartir-sesión-de-tmux">compartir sesión de tmux</h2>
+
+<p>Varias personas pueden estar conectadas a una misma sesión de tmux y trabajar simultaneamente sobre un mismo panel o sobre distintos paneles, de manera colaborativa. Existen al menos tres vias para esto</p>
+
+<ul>
+  <li>conectando el cliente de tmux al socket empleado por el servidor tmux. Esta es la manera nativa y la recomendada</li>
+  <li>compartiendo un usuario de la maquina donde se ejecuta el servidor tmux. Aunque el usaurio se cree expresamente para este fin, y no se comparta la contraseña sino que el acceso SSH sea por clave pública, por seguridad esto no es recomendable ya que ambas personas tienen acceso al mismo directorio home, etc…</li>
+  <li>empleando una herramienta externa, como es <code class="language-plaintext highlighter-rouge">tmate</code> (un fork de tmux)</li>
+</ul>
+
+<p>Al mostrar la pantalla a otra persona, compartir la sesion tmux tiene consideraciones de seguridad. Es recomendable emplear un host con los ficheros/proyectos a compartir, de manera que por error no se muestren a la otra persona ficheros fuera del alcance del proyecto para el que se comparte la sesión tmux. El empleo de máquinas virtuales puede ser de ayuda.</p>
+
+<p>Se resume el caso de uso nativo emop</p>
+
+<p> </p>
+
+<h3 id="sesiones-agrupadas">sesiones agrupadas</h3>
+
+<p>Diferentes sesiones pueden pertenecer a un mismo grupo o sesion agrupada. Una sesion agrupada se muestra como un mismo conjunto de ventanas, donde cada cliente conectado pueden estar en una ventana distinta de la sesión agrupada.</p>
+
+<p>De esta forma dos personas conectadas a una sesión agrupada que tenga dos ventanas, pueden estar cada una de ellas trabajando en una ventana diferente, o pueden estar en la misma ventana y trabajar simultaneamente.</p>
+
+<p>Para crear una sesion agrupada, la primera sesion se inicia normalmente (la sesion agrupada empleará este nombre)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux new-session -s sesion1
+</code></pre></div></div>
+
+<p>La persona abandona la sesión (C-b d), y puede vuelve a conectarse normalmente a la sesion1 (asi se muestra en la linea de estado de tmux)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux a -t sesion1
+</code></pre></div></div>
+
+<p>Ahora la segunda persona crea una nueva sesión, con el nombre sesion2, y la crea de manera agrupada con la existente sesion1 (en este momento se define la sesion agrupada “sesion1”)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux new-session -t sesion1 -s sesion2
+</code></pre></div></div>
+
+<p>La segunda persona se conecta a la sesion2 (así se muestra en la linea de estado de tmux), que pertenece a la sesion agrupada sesion1, y puede crear ventanas nuevas (que tambien estarán disponibles para la primera persona en sesion1) y cambiarse a ellas.</p>
+
+<p>Si alguna de las dos personas se desconecta y lista las sesiones, el servidor muestra lo siguiente</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sesion1: 1 windows (created Sun Dec 10 18:53:20 2023) (group sesion1)
+sesion2: 1 windows (created Sun Dec 10 18:53:31 2023) (group sesion1)
+</code></pre></div></div>
+
+
+	</div>
+	<hr>
+	
+	<div id="pie">
+	version 1.0
+	</div>
+  </body>
+</html>

@@ -8,14 +8,25 @@
   <body id="fondotech">
   	<div id="cabecera">
 		referencia rapida de git</br>
-		2023-11-23
+		2024-02-13
 	</div>
 	
 	<hr>
 	<div id="texto">
-		<h1 id="git">git</h1>
+		<h1 id="-git"><a href="../" style="text-decoration: none; color:black">←←</a>  git</h1>
+
+<p><a href="#1-que-es-github">1 que es github</a></p>
+
+<p><a href="#2-instalacion-de-git">2 instalacion de git</a></p>
+
+<p><a href="#3comenzar-cuando-el-repositorio-está-en-línea">3 comenzar cuando el repositorio está en línea</a></p>
+
+<p><a href="#4-comenzar-creando-un-repositorio-local-y-luego-enviándolo-a-un-repo-en-línea">4 comenzar creando un repositorio local y luego enviándolo a un repo en línea</a></p>
+
+<p><a href="#5-acceder-a-github-de-manera-remota">5 acceder a github de manera remota</a></p>
 
 <p> </p>
+
 <h2 id="1-que-es-github">1 que es github</h2>
 <p>Software de control de versiones creado en 2005 por Linus Torvalds, para trabajar con varios desarrolladores en el núcleo de Linux.
 <strong>git</strong> rastrea el contenido y permite revertir y regresar a una versión anterior del código.</p>
@@ -25,9 +36,9 @@
   <li><strong>rama</strong>, copia independiente del codigo que puede cambiarse y luego integrarse, o no</li>
   <li><strong>repositorio</strong>, proyecto con multiples archivos, hay 3 de referencia,
     <ul>
-      <li>github, de microsoft</li>
-      <li>gitlab, de gitlab</li>
-      <li>bitbucket, de atlassian</li>
+      <li><a href="https://github.com/">github</a>, de microsoft</li>
+      <li><a href="">gitlab</a>, de gitlab</li>
+      <li><a href="">bitbucket</a>, de atlassian</li>
     </ul>
   </li>
 </ul>
@@ -121,7 +132,7 @@ git config --global user.mail "email_defecto"
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Se crea el repositorio remoto, se obtiene su URL y se añade al proyecto git con el nombre “origin” (por defecto)</p>
+    <p>Se crea el repositorio remoto (vacío,<em>sin README</em>) se obtiene su URL y se añade al proyecto git con el nombre “origin” (por defecto)</p>
 
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin URL
 </code></pre></div>    </div>
@@ -139,6 +150,30 @@ git config --global user.mail "email_defecto"
 </code></pre></div>    </div>
   </li>
 </ol>
+
+<p>https://github.com/sigmalec/wwwsigmalec.git</p>
+
+<h2 id="5-acceder-a-github-de-manera-remota">5 acceder a github de manera remota</h2>
+<p>Desde 2021 no se admite acceso remoto por contraseña a github; hay que emplear un PAT (Personal Access Token)</p>
+
+<p>Se obtiene desde <em>Settings &gt; Developer Settings &gt; Personal Access Token &gt; Tokens (classic) &gt; Generate a Personal Access Token &gt; click Generate token</em></p>
+
+<p>Al seleccionar los permisos de acceso, se elige el primer bloque completo “repo”</p>
+
+<p>En operaciones donde introducir la contraseña, se puede introducir el PAT.</p>
+
+<p>se puede cachear:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global credential.helper cache
+</code></pre></div></div>
+
+<p>Se pueden borrar los credenciales</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global --unset credential.helper
+git config --system --unset credential.helper
+</code></pre></div></div>
+
+<p><em>Mas informacion: https://git-scm.com/docs/gitcredentials</em></p>
 
 	</div>
 	<hr>

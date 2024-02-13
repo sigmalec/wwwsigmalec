@@ -67,7 +67,7 @@
 hr 		{
         background-color: #B0B0B0;
         border-width: 0;
-        height: 2px;
+        height: 3px;
 		}
 
 h2      {

@@ -1,56 +1,56 @@
 @font-face {
-		font-family: "ibmplexsans-light";
-		font-weight: 200;
-		src: url("../fnt/ibmplexsans/IBMPlexSans-ExtraLight.ttf");
-		}
+        font-family: "ibmplexsans-light";
+        font-weight: 200;
+        src: url("../fnt/ibmplexsans/IBMPlexSans-ExtraLight.ttf");
+        }
  @font-face {
-		font-family: "ibmplexsans-regular";
-		font-weight: 500;
-		src: url("../fnt/ibmplexsans/IBMPlexSans-Medium.ttf");
-		}
+        font-family: "ibmplexsans-regular";
+        font-weight: 500;
+        src: url("../fnt/ibmplexsans/IBMPlexSans-Medium.ttf");
+        }
 
-#fondobib	{
-		background-image: url("../img/fondobib.jpg") ;
-		background-attachment: fixed;
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-color: rgb(20,36,51); 
-		}		
+#fondobib   {
+        background-image: url("../img/fondobib.jpg") ;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: rgb(20,36,51); 
+        }       
  
  
 body,a {
         font-family: 'ibmplexsans-light';
-		font-size:24px;
+        font-size:24px;
         letter-spacing: 1px;
         text-decoration: none;
         }
 
-body 	{
-		max-width: 1000px;
-		margin: 0 auto;
-		float: none;
-		color:#F3F6FB;
-		}
+body    {
+        max-width: 1000px;
+        margin: 0 auto;
+        float: none;
+        color:#F3F6FB;
+        }
 
-a 		{
-		color:#FFFFFF;
-		}
+a       {
+        color:#FFFFFF;
+        }
 
 a:hover {
-		color:rgb(20,36,51);
-		background-color: #F3F6FB;
-		}
+        color:rgb(20,36,51);
+        background-color: #F3F6FB;
+        }
 
-hr 		{
+hr      {
         background-color: #F3F6FB;
         border-width: 0;
         height: 1px;
-		}
-		
-#textobib	{
+        }
+        
+#textobib   {
         font-family: 'ibmplexsans-light';
-		font-size:16px;
-		letter-spacing: 3px;
-		opacity: 0.3;
-		}	
+        font-size:16px;
+        letter-spacing: 3px;
+        opacity: 0.3;
+        }   

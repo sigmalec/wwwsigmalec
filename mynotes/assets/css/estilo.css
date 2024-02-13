@@ -21,7 +21,7 @@
 }
 
 #cabecera {
-  font-family: "ibmplexsans-light";
+  font-family: "ibmplexsans-regular";
   font-size: 14px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -29,7 +29,7 @@
 }
 
 #pie {
-  font-family: "ibmplexsans-light";
+  font-family: "ibmplexsans-regular";
   font-size: 14px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -61,9 +61,11 @@
 }
 
 hr {
-  background-color: #000000;
+  background-color: #B0B0B0;
   border-width: 0;
-  height: 1px;
+  height: 2px;
 }
 
-/*# sourceMappingURL=estilo.css.map */
+h2 {
+  text-decoration: underline 1.5px;
+}

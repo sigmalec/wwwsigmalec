@@ -1,5 +1,3 @@
 source: /var/www/html/sigmalec/md
 destination: /var/www/html/sigmalec/mynotes
 verbose: true
-sass:
-  sourcemap: never
